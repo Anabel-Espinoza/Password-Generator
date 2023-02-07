@@ -17,7 +17,7 @@ N/A
 2. The user will be requested to enter password length with a value between 8-128. 
     - If the user enters text or decimal numbers, a message will be presented, asking to enter only whole numbers. 
     - If the user enters a number outside the interval, a message will be presented asking for the number to be within 8-128 characters. 
-    The user must click the 'Generate Password' button again and enter a valid input for the generator to display the next prompts.
+The user must click the 'Generate Password' button again and enter a valid input for the generator to display the next prompts.
 3. Four more prompts are presented to the user asking for the type of characters that can be included in the password: lowercase, uppercase, numbers, and special symbols. At least one of those types must be selected to be able to generate a password. In the case the user doesn't select at least 1 type of characters, then a message will let the user know the reason the password is not generated.
 4. After the prompts have been answered properly by the user, the generated password will appear on the webpage inside the dotted box.
 

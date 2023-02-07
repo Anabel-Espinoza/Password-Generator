@@ -20,7 +20,7 @@ function generatePassword() {
     } else if (passwordLength<8 || passwordLength>128) {
       window.alert ("Password length must be between 8-128")
     } else {
-      // character type prompts
+      // Character type prompts
       let useLowercase= window.confirm ("Click OK to include lowercase characters")
       if (useLowercase) {
         characterBank += lowercaseBank
