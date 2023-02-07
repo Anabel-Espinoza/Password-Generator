@@ -1,5 +1,4 @@
 // Assignment code here
-
 let numberBank = "1234567890"
 let lowercaseBank = "abcdefghijklmnopqrstuvwxyz"
 let uppercaseBank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -11,19 +10,20 @@ var generateBtn = document.querySelector("#generate")
 
 // Write password to the #password input
 function generatePassword() {
-// Reset password display before each password is generated
+// Reset password display and character bank before each password is generated
   let characterBank = ""
   let password = ""
-  // User prompts
-  var passwordLength = window.prompt ("Enter password lenght (8-128 characters)")
-    if (passwordLength<8 || passwordLength>128) {
-      window.alert ("Password length must be between 8-128 characters")
+  // User length prompt with validation: whole number bewtween 8-128 characters
+  var passwordLength = Number(window.prompt ("Enter password length (8-128 characters)"))
+  console.log(passwordLength)
+    if (passwordLength<8 || passwordLength>128 || !Number.isInteger(passwordLength)) {
+      window.alert ("Password length must only contain whole numbers whitin the interval of 8-128 characters")
     } else {
+      // character type prompts
       let useLowercase= window.confirm ("Click OK to include lowercase characters")
       if (useLowercase) {
         characterBank += lowercaseBank
       }
-      
       let useUppercase  = window.confirm ("Click OK to include uppercase characters?") 
       if (useUppercase) {
         characterBank += uppercaseBank
@@ -38,7 +38,7 @@ function generatePassword() {
       if (useSymbols) {  
       characterBank += symbolBank
        }  
-       // user prompt validation
+       // user prompt characters validation
       if (useLowercase === false && useUppercase === false && useSymbols === false && useNumbers === false) {
         window.alert ("At least one type of character must be selected")
       } else {
